@@ -310,4 +310,12 @@ body.lock-scroll {
     font-weight: bold;
 
 }
+    /* --- Mobile Counter Adjustments --- */
+    .counter-number {
+        font-size: 2.8rem; /* کاهش اندازه فونت شمارنده در موبایل */
+    }
+
+    .hashtag-name {
+        font-size: 1.3rem; /* کاهش اندازه فونت هشتگ در موبایل */
+    }
 
