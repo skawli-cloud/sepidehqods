@@ -183,8 +183,9 @@ body.lock-scroll {
     font-weight: 700;
     color: var(--dark-charcoal);
     margin-bottom: 10px;
-    direction: ltr; /* برای نمایش صحیح اعداد */
-    font-family: monospace; /* برای جلوگیری از پرش اعداد */
+    direction: ltr;
+    /* === تغییر جدید: استفاده از فونت اصلی سایت برای هماهنگی === */
+    font-family: 'Vazirmatn', monospace;
 }
 
 .counter-label {
