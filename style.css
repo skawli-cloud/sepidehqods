@@ -30,15 +30,9 @@ body {
     font-family: 'Vazirmatn', sans-serif;
     line-height: 1.8;
     color: var(--text-color);
-    /* === تغییر جدید: اضافه کردن پس‌زمینه ثابت برای کل سایت === */
-    background-image: url('logo.png');
-    background-attachment: fixed; /* باعث می‌شود پس‌زمینه هنگام اسکرول ثابت بماند */
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(20, 50, 20, 0.75); /* رنگ پایه */
-    background-blend-mode: overlay; /* ترکیب زیبای رنگ و تصویر */
-}```
+    background-color: var(--pure-white); /* فقط این خط باید باشد */
+    transition: padding-right 0.3s ease;
+}
 
 body.lock-scroll {
     overflow: hidden;
@@ -384,6 +378,7 @@ body.lock-scroll {
     .hashtag-name {
         font-size: 1.3rem; /* کاهش اندازه فونت هشتگ در موبایل */
     }
+
 
 
 
