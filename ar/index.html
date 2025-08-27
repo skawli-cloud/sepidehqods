@@ -73,7 +73,7 @@
                 </div>
                 <div class="grid-container">
                     <article class="card">
-                        <img src="1.png" alt="صورة المقال" class="card-img">
+                        <img src="../1.png" alt="صورة المقال" class="card-img">
                         <div class="card-content">
                             <h3>في عالم اليوم، المعركة الرئيسية تدور في الإعلام. كيف يمكننا الفوز في هذه الحرب؟</h3>
                             <a href="/ar/blog.html" class="btn btn-secondary">اقرأ المزيد</a>
@@ -165,50 +165,47 @@
         // قائمة الموبايل
         const hamburger = document.querySelector('.hamburger-menu');
         const navMenu = document.querySelector('.main-nav');
-        <!-- ========== شروع کد جاوا اسکریپت برای شمارنده زنده ========== -->
-        <script>
-            // مطمئن می‌شویم که این کد فقط در صفحه‌ای که شمارنده وجود دارد، اجرا می‌شود
-            if (document.getElementById('live-counter')) {
-                
-                const counterElement = document.getElementById('live-counter');
+        const body = document.body;
 
-                // ========== عدد شروع را اینجا تنظیم کنید ==========
-                let currentCount = 25000000; 
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('lock-scroll');
+        });
 
-                // هر چند میلی‌ثانیه عدد آپدیت شود (مثلا هر ۱.۵ ثانیه)
-                const updateInterval = 1500; 
+        // العداد المباشر
+        if (document.getElementById('live-counter')) {
+            const counterElement = document.getElementById('live-counter');
+            let currentCount = 25000000; 
+            const updateInterval = 1500; 
 
-                function formatNumberWithCommas(number) {
-                    // این تابع به عدد کاما اضافه می‌کند (مثلا ۲۵,۰۰۰,۰۰۰)
-                    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                }
-
-                function updateCounter() {
-                    // یک عدد تصادفی بین ۱ تا ۷ اضافه می‌کند تا طبیعی به نظر برسد
-                    const increment = Math.floor(Math.random() * 7) + 1;
-                    currentCount += increment;
-                    
-                    // عدد جدید را با فرمت صحیح نمایش می‌دهد
-                    counterElement.textContent = formatNumberWithCommas(currentCount);
-                }
-
-                // نمایش عدد اولیه بلافاصله (با یک انیمیشن کوتاه)
-                let start = currentCount - 200; // شروع انیمیشن از کمی قبل‌تر
-                const duration = 2000; // ۲ ثانیه طول می‌کشد تا به عدد اصلی برسد
-                const stepTime = 10;
-                const steps = duration / stepTime;
-                const increment = (currentCount - start) / steps;
-
-                let current = start;
-                const timer = setInterval(() => {
-                    current += increment;
-                    counterElement.textContent = formatNumberWithCommas(Math.round(current));
-                    if(current >= currentCount){
-                        clearInterval(timer);
-                        counterElement.textContent = formatNumberWithCommas(currentCount); // نمایش عدد دقیق در انتها
-                        // شروع آپدیت خودکار بعد از انیمیشن اولیه
-                        setInterval(updateCounter, updateInterval);
-                    }
-                }, stepTime);
+            function formatNumberWithCommas(number) {
+                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             }
-        </script>
+
+            function updateCounter() {
+                const increment = Math.floor(Math.random() * 7) + 1;
+                currentCount += increment;
+                counterElement.textContent = formatNumberWithCommas(currentCount);
+            }
+
+            let start = currentCount - 200;
+            const duration = 2000;
+            const stepTime = 10;
+            const steps = duration / stepTime;
+            const increment = (currentCount - start) / steps;
+            let current = start;
+            const timer = setInterval(() => {
+                current += increment;
+                counterElement.textContent = formatNumberWithCommas(Math.round(current));
+                if(current >= currentCount){
+                    clearInterval(timer);
+                    counterElement.textContent = formatNumberWithCommas(currentCount);
+                    setInterval(updateCounter, updateInterval);
+                }
+            }, stepTime);
+        }
+    </script>
+
+</body>
+</html>
