@@ -30,8 +30,27 @@ body {
     font-family: 'Vazirmatn', sans-serif;
     line-height: 1.8;
     color: var(--text-color);
-    background-color: var(--pure-white);
-}
+    /* === تغییر جدید: اضافه کردن پس‌زمینه ثابت برای کل سایت === */
+    background-image: url('logo.png');
+    background-attachment: fixed; /* باعث می‌شود پس‌زمینه هنگام اسکرول ثابت بماند */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(20, 50, 20, 0.75); /* رنگ پایه */
+    background-blend-mode: overlay; /* ترکیب زیبای رنگ و تصویر */
+}```
+
+---
+
+### **توضیح کد جدید و چرا این بار درست کار می‌کند:**
+
+*   `background-image: url('logo.png');`: ما تصویر پس‌زمینه را به کل `<body>` (بدنه اصلی تمام صفحات) اعمال می‌کنیم.
+*   `background-attachment: fixed;`: این **مهم‌ترین** بخش است. این دستور باعث می‌شود که تصویر پس‌زمینه هنگام اسکرول کردن صفحه، ثابت بماند و حرکت نکند و در تمام صفحات به صورت یکپارچه دیده شود.
+*   `background-blend-mode: overlay;`: این یک افکت زیبا ایجاد می‌کند که لایه رنگی و تصویر را به صورت جذابی با هم ترکیب می‌کند.
+
+با این تغییر ساده، تمام صفحات سایت شما (صفحه اصلی، وبلاگ و درباره ما) همان پس‌زمینه زیبا و یکپارچه را خواهند داشت، بدون اینکه نیازی به تکرار کدهای HTML در صفحات مختلف باشد.
+
+من دوباره بابت اشتباه قبلی عذرخواهی می‌کنم. این راه حل جدید، بسیار ساده‌تر و دقیقاً مطابق با درخواست شماست.
 
 body.lock-scroll {
     overflow: hidden;
@@ -377,5 +396,6 @@ body.lock-scroll {
     .hashtag-name {
         font-size: 1.3rem; /* کاهش اندازه فونت هشتگ در موبایل */
     }
+
 
 
