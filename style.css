@@ -250,6 +250,35 @@ body.lock-scroll {
         font-size: 1.8rem;
     }
 }
+```css
+/* ==================================================
+   استایل دکمه‌های تغییر زبان
+   ================================================== */
+.language-switcher {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px; /* فاصله از منوی اصلی */
+}
+
+.lang-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.lang-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--pure-white);
+}
+
+.lang-link.active {
+    background-color: var(--pure-white);
+    color: var(--primary-green);
+}
 /* ==================================================
    MOBILE STYLES
    ================================================== */
@@ -378,6 +407,7 @@ body.lock-scroll {
     .hashtag-name {
         font-size: 1.3rem; /* کاهش اندازه فونت هشتگ در موبایل */
     }
+
 
 
 
