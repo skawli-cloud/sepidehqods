@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آخر الأخبار - سپیده قدس</title>
+    <link rel="stylesheet" href="../style.css"> <!-- المسار الصحيح لملف CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header class="main-header">
+        <div class="container">
+            <a href="/ar/index.html" class="logo-container">
+                <img src="../logo.png" alt="شعار سپیده قدس" class="logo-img"> <!-- المسار الصحيح للشعار -->
+                <span class="logo-text">سپیده قدس</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/ar/index.html">الرئيسية</a></li>
+                    <li><a href="/ar/about.html">من نحن</a></li>
+                    <li><a href="/ar/blog.html">المدونة</a></li>
+                    <li><a href="/ar/index.html#strongholds">معاقلنا</a></li>
+                    <li><a href="/ar/index.html#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <!-- أزرار تغيير اللغة -->
+            <div class="language-switcher">
+                <a href="/blog.html" class="lang-link">FA</a>
+                <a href="/en/blog.html" class="lang-link">EN</a>
+                <a href="/ar/blog.html" class="lang-link active">AR</a>
+            </div>
+            <button class="hamburger-menu" aria-label="فتح/إغلاق القائمة">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- القسم الرئيسي لصفحة المدونة -->
+        <section class="content-section">
+            <div class="container">
+                <!-- عنوان الصفحة -->
+                <div class="page-header">
+                    <h1>مدونة سپیده قدس</h1>
+                    <p>صوت الشعب</p>
+                </div>
+
+                <!-- قائمة جميع الأخبار -->
+                <div class="grid-container">
+                    <!-- الخبر ١ -->
+                    <article class="card">
+                        <img src="../1.png" alt="صورة الخبر" class="card-img"> <!-- المسار الصحيح للصورة -->
+                        <div class="card-content">
+                            <p class="news-date">٢٠٢٥/٠٠/٠٠</p>
+                            <h3>في عالم اليوم، المعركة الرئيسية تدور في الإعلام. كيف يمكننا الفوز في هذه الحرب؟</h3>
+                            <p>في عالم اليوم، ساحة المعركة الرئيسية ليست فقط على الحدود، بل في وسائل الإعلام. نؤمن بأن صوت المظلومين لا يجب أن يُخرس وسط دعاية الأقوياء. رسالتنا هي استخدام الإعلام المتاح لنا لإيصال الرواية الحقيقية لغزة وشعب فلسطين البريء إلى العالم.</p>
+                            <p>الانتصار في هذه الحرب الإعلامية لا يمكن تحقيقه إلا بسلاح الحقيقة والضمير الإنساني. نريد أن نحطم جدار الصمت من خلال إنتاج محتوى صادق، ونشر صور وروايات حقيقية، وعكس المعاناة والمقاومة.</p>
+                            <p>هذه المنصة ليست مجرد أداة إعلامية بالنسبة لنا؛ إنها معقل ضد تشويه الواقع وتجاهل حقوق الإنسان. نحن نقف إلى جانب شعب فلسطين ونسعى جاهدين لنكون صوتهم، لأننا نؤمن بأن الحقيقة والعدالة ستنتصران في النهاية على الكذب والظلم.</p>
+                        </div>
+                    </article>
+                    <!-- الخبر ٢ -->
+                    <article class="card">
+                        <img src="../topic1.png" alt="صورة الخبر" class="card-img"> <!-- المسار الصحيح للصورة -->
+                        <div class="card-content">
+                            <p class="news-date">٢٠٢٥/٠٠/٠٠</p>
+                            <h3>سپیده قدس</h3>
+                            <p>صوت من لا صوت له</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 سپیده قدس. ثورة تنتصر بالوعي.</p>
+        </div>
+    </footer>
+
+    <!-- جافا سكريبت لقائمة الموبايل -->
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.main-nav');
+        const body = document.body;
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            body.classList.toggle('lock-scroll');
+        });
+    </script>
+
+</body>
+</html>```
