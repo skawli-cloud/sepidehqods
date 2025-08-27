@@ -285,6 +285,11 @@ body.lock-scroll {
 @media(max-width: 768px) {
     
      /* --- Mobile Header & Navigation (UPDATED) --- */
+      /* === تغییر جدید: کاهش اندازه نام سایت در موبایل === */
+    .logo-text {
+        font-size: 2.2rem; /* اندازه را از 3.0rem کاهش دادیم */
+    }
+  
     .main-header .container {
         position: relative; /* برای جای‌گیری صحیح منو */
     }
