@@ -512,9 +512,9 @@ body.lock-scroll {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* === تغییر نهایی: کاهش اندازه نام سایت در موبایل === */
-    .logo-text {
-        font-size: 2.2rem;
+    /* === تغییر جدید و هوشمندانه: کوچک کردن بیشتر نام سایت فقط در زبان انگلیسی === */
+    html[lang="en"] .logo-text {
+        font-size: 1.5rem; /* اندازه را برای انگلیسی بسیار کمتر می‌کنیم */
     }
 
     /* --- Mobile Hero Section --- */
