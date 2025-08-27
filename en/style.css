@@ -512,9 +512,10 @@ body.lock-scroll {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* === تغییر جدید و هوشمندانه: کوچک کردن بیشتر نام سایت فقط در زبان انگلیسی === */
-    html[lang="en"] .logo-text {
-        font-size: 1.5rem; /* اندازه را برای انگلیسی بسیار کمتر می‌کنیم */
+    /* === تغییر نهایی و قطعی: کوچک کردن بیشتر نام سایت فقط برای نسخه انگلیسی === */
+    .logo-text {
+        font-size: 1.8rem; /* این عدد را می‌توانید تنظیم کنید */
+        font-family: 'Vazirmatn', sans-serif; /* اطمینان از استفاده از فونت صحیح */
     }
 
     /* --- Mobile Hero Section --- */
