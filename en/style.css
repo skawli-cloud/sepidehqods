@@ -1,7 +1,7 @@
 /* تعریف فونت محلی با آدرس صحیح */
 @font-face {
   font-family: 'IranNastaliq';
-  src: url('../fonts/IranNastaliq.ttf') format('truetype'); /* آدرس صحیح به پوشه اصلی */
+  src: url('/en/IranNastaliq.ttf') format('truetype'); /* آدرس صحیح به پوشه اصلی */
   font-weight: normal;
   font-style: normal;
 }
