@@ -283,8 +283,13 @@ body.lock-scroll {
    MOBILE STYLES
    ================================================== */
 @media(max-width: 768px) {
+
+      /* === کد جدید برای تغییر اندازه لوگو تکست در موبایل === */
+    .logo-text {
+        font-size: 1.0rem; /* اندازه دلخواه خود را اینجا وارد کنید */
+    }
     
-    .hamburger-menu {
+  .hamburger-menu {
         display: block;
         cursor: pointer;
         background: transparent;
