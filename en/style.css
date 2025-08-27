@@ -77,9 +77,9 @@ body.lock-scroll {
 
 .logo-text {
     color: var(--pure-white);
-    font-weight: 7000;
+    font-weight: 700;
     font-family: 'IranNastaliq', 'Vazirmatn', sans-serif;
-    font-size: 100.0rem;
+    font-size: 3.0rem;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -241,8 +241,14 @@ body.lock-scroll {
 }
 
 /* استایل مخصوص موبایل برای همین بخش */
-@media (max-width: 768px) {
-    .feature-grid {
+@media (max-width: 768px)
+{
+        /* === تغییر جدید: کاهش اندازه نام سایت در موبایل === */
+  .logo-text {
+        font-size: 1.0rem; /* اندازه را از 3.0rem کاهش دادیم */
+    }
+  
+  .feature-grid {
         grid-template-columns: 1fr;
     }
 
@@ -285,10 +291,6 @@ body.lock-scroll {
 @media(max-width: 768px) {
     
      /* --- Mobile Header & Navigation (UPDATED) --- */
-      /* === تغییر جدید: کاهش اندازه نام سایت در موبایل === */
-    .logo-text {
-        font-size: 1.0rem; /* اندازه را از 3.0rem کاهش دادیم */
-    }
   
     .main-header .container {
         position: relative; /* برای جای‌گیری صحیح منو */
