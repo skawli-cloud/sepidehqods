@@ -284,22 +284,13 @@ body.lock-scroll {
    ================================================== */
 @media(max-width: 768px) {
     
-    .hamburger-menu {
-        display: block;
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        padding: 0;
-        z-index: 1001;
+     /* --- Mobile Header & Navigation (UPDATED) --- */
+    .main-header .container {
+        position: relative; /* برای جای‌گیری صحیح منو */
     }
 
-    .hamburger-menu .bar {
+    .hamburger-menu {
         display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background-color: var(--pure-white);
     }
 
     .main-nav {
@@ -313,6 +304,8 @@ body.lock-scroll {
         transition: left 0.3s ease-in-out;
         box-shadow: 0 0 20px rgba(0,0,0,0.2);
         padding-top: 85px;
+        display: flex; /* برای چیدمان جدید */
+        flex-direction: column;
     }
 
     .main-nav.active {
@@ -333,6 +326,16 @@ body.lock-scroll {
     
     .main-nav ul li:first-child {
         border-top: none;
+    }
+
+    /* === تغییر جدید: استایل دکمه‌های زبان در منوی بازشونده === */
+    .language-switcher {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: auto; /* دکمه‌ها را به پایین منو می‌چسباند */
+        padding: 20px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     .hamburger-menu.active .bar:nth-child(2) {
