@@ -64,24 +64,41 @@
             </div>
         </section>
             
-        <!-- قسم المدونة -->
-        <section id="blog" class="content-section bg-light">
-            <div class="container">
-                <div class="section-title">
-                    <h2>المدونة: معقل الفكر</h2>
-                    <p>روايات جريحة، تحليلات عميقة، ونظرة تنبع من قلب النار.</p>
-                </div>
-                <div class="grid-container">
-                    <article class="card">
-                        <img src="../1.png" alt="صورة المقال" class="card-img">
-                        <div class="card-content">
-                            <h3>في عالم اليوم، المعركة الرئيسية تدور في الإعلام. كيف يمكننا الفوز في هذه الحرب؟</h3>
-                            <a href="/ar/blog.html" class="btn btn-secondary">اقرأ المزيد</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+<!-- Blog Section -->
+<section id="blog" class="content-section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>المدونة: معقل الفكر</h2>
+            <p>روايات جريحة، تحليلات عميقة، ونظرة تنبع من قلب النار.</p>
+        </div>
+        <div class="grid-container" id="blog-container-ar">
+            <!-- Posts will be loaded from main.json -->
+        </div>
+    </div>
+</section>
+
+<script>
+    const containerAr = document.getElementById('blog-container-ar');
+
+    fetch('main.json') // مسار ملف JSON
+        .then(response => response.json())
+        .then(posts => {
+            posts.forEach(post => {
+                const article = document.createElement('article');
+                article.className = 'card';
+                article.innerHTML = `
+                    <img src="${post.image}" alt="${post.title.ar}" class="card-img">
+                    <div class="card-content">
+                        <h3>${post.title.ar}</h3>
+                        <a href="${post.link.ar}" class="btn btn-secondary">اقرأ المزيد</a>
+                    </div>
+                `;
+                containerAr.appendChild(article);
+            });
+        })
+        .catch(err => console.error('Error loading posts:', err));
+</script>
+
 
         <!-- قسم معاقلنا الرئيسية -->
         <section id="strongholds" class="content-section">
