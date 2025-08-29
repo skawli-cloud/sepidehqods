@@ -14,9 +14,9 @@
     },
     "image": "1.png",
     "link": {
-      "fa": "blog-fa.html",
-      "en": "blog-en.html",
-      "ar": "blog-ar.html"
+      "fa": "blog.html",
+      "en": "/en/blog.html",
+      "ar": "/ar/blog.html"
     }
   },
   {
@@ -34,9 +34,9 @@
     },
     "image": "topic1.png",
     "link": {
-      "fa": "post2-fa.html",
-      "en": "post2-en.html",
-      "ar": "post2-ar.html"
+      "fa": "blog.html",
+      "en": "/en/blog.html",
+      "ar": "/ar/blog.html"
     }
   },
   {
@@ -54,9 +54,9 @@
     },
     "image": "topic2.png",
     "link": {
-      "fa": "post3-fa.html",
-      "en": "post3-en.html",
-      "ar": "post3-ar.html"
+      "fa": "blog.html",
+      "en": "/en/blog.html",
+      "ar": "/ar/blog.html"
     }
   }
 ]
