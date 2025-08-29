@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "date": "1404/0/0",
+    "title": {
+      "fa": "در دنیای امروز، نبرد اصلی در میدان رسانه‌هاست. چگونه می‌توان در این جنگ پیروز شد؟",
+      "en": "In today's world, the main battle is in the media field. How can we succeed in this war?",
+      "ar": "في عالم اليوم، المعركة الرئيسية في وسائل الإعلام. كيف يمكننا النجاح في هذه الحرب؟"
+    },
+    "content": {
+      "fa": "در دنیای امروز، میدان اصلی نبرد نه فقط در مرزها، بلکه در رسانه‌هاست. ما باور داریم که صدای مظلومان نباید در هیاهوی پروپاگاندای قدرت‌ها خاموش شود. رسالت ما این است که با رسانه‌ای که در اختیار داریم، روایت واقعی از غزه و مردم بی‌گناه فلسطین را به گوش جهان برسانیم.\n\nپیروزی در این جنگ رسانه‌ای، تنها با سلاح حقیقت و وجدان انسانی ممکن است. ما می‌خواهیم با تولید محتوای صادقانه، انتشار تصاویر و روایت‌های واقعی، و بازتاب رنج‌ها و مقاومت‌ها، دیوار سکوت را بشکنیم.\n\nاین رسانه برای ما فقط یک ابزار اطلاع‌رسانی نیست؛ سنگری است در برابر تحریف واقعیت و نادیده‌گرفتن حقوق انسان‌ها. ما در کنار مردم فلسطین ایستاده‌ایم و تلاش می‌کنیم صدای آن‌ها باشیم، چون ایمان داریم که در نهایت، حقیقت و عدالت بر دروغ و ظلم پیروز خواهد شد.",
+      "en": "In today's world, the main battlefield is not just on borders but in the media. We believe that the voice of the oppressed should not be silenced in the noise of powerful propaganda. Our mission is to use our media to convey the real story of Gaza and innocent Palestinian people to the world.\n\nVictory in this media war is only possible with truth and human conscience. We want to produce honest content, share real images and stories, and break the wall of silence.\n\nThis media is not just a tool for us; it's a fortress against distortion of reality and neglect of human rights. We stand with the people of Palestine and try to be their voice, believing that truth and justice will ultimately triumph over lies and oppression.",
+      "ar": "في عالم اليوم، ساحة المعركة الرئيسية ليست فقط على الحدود ولكن في وسائل الإعلام. نحن نؤمن بأن صوت المظلومين لا يجب أن يُخمد في ضجيج دعاية القوى. مهمتنا هي استخدام وسائل الإعلام الخاصة بنا لنقل القصة الحقيقية عن غزة والشعب الفلسطيني البريء إلى العالم.\n\nالنصر في هذه الحرب الإعلامية ممكن فقط باستخدام الحقيقة والضمير الإنساني. نريد إنتاج محتوى صادق، ومشاركة الصور والقصص الحقيقية، وكسر جدار الصمت.\n\nهذه الوسيلة الإعلامية ليست مجرد أداة لنا؛ إنها حصن ضد تحريف الواقع وتجاهل حقوق الإنسان. نحن نقف مع شعب فلسطين ونسعى لأن نكون صوتهم، لأننا نؤمن بأن الحقيقة والعدالة ستنتصر في النهاية على الكذب والظلم."
+    },
+    "image": "1.png"
+  },
+  {
+    "id": 2,
+    "date": "1404/0/0",
+    "title": {
+      "fa": "سپیده قدس",
+      "en": "Sepideh Qods",
+      "ar": "سبیده قدس"
+    },
+    "content": {
+      "fa": "صدای بی صدایان",
+      "en": "Voice of the voiceless",
+      "ar": "صوت الذين بلا صوت"
+    },
+    "image": "topic1.png"
+  }
+]
