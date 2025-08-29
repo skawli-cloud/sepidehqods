@@ -66,24 +66,41 @@
             </div>
         </section>
             
-        <!-- Blog Section -->
-        <section id="blog" class="content-section bg-light">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Blog: The Stronghold of Thought</h2>
-                    <p>Wounded narratives, deep analyses, and a perspective that rises from the fire.</p>
-                </div>
-                <div class="grid-container">
-                    <article class="card">
-                        <img src="1.png" alt="Article Image" class="card-img">
-                        <div class="card-content">
-                            <h3>In today's world, the main battle is in the media. How can we win this war?</h3>
-                            <a href="/en/blog.html" class="btn btn-secondary">Read More</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+<!-- Blog Section -->
+<section id="blog" class="content-section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Blog: The Stronghold of Thought</h2>
+            <p>Wounded narratives, deep analyses, and a perspective that rises from the fire.</p>
+        </div>
+        <div class="grid-container" id="blog-container-en">
+            <!-- Posts will be loaded from main.json -->
+        </div>
+    </div>
+</section>
+
+<script>
+    const containerEn = document.getElementById('blog-container-en');
+
+    fetch('main.json') // مسیر فایل JSON
+        .then(response => response.json())
+        .then(posts => {
+            posts.forEach(post => {
+                const article = document.createElement('article');
+                article.className = 'card';
+                article.innerHTML = `
+                    <img src="${post.image}" alt="${post.title.en}" class="card-img">
+                    <div class="card-content">
+                        <h3>${post.title.en}</h3>
+                        <a href="${post.link.en}" class="btn btn-secondary">Read More</a>
+                    </div>
+                `;
+                containerEn.appendChild(article);
+            });
+        })
+        .catch(err => console.error('Error loading posts:', err));
+</script>
+
 
         <!-- Key Strongholds Section -->
         <section id="strongholds" class="content-section">
