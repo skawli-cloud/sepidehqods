@@ -94,7 +94,7 @@ fetch('/main.json')
                 <img src="${post.image}" alt="${post.title.en}" class="card-img">
                 <div class="card-content">
                     <h3>${post.title.en}</h3>
-                    <p>${post.description.en || ''}</p>
+                    <p>${post.content.en || ''}</p>
                     <a href="${post.link.en}" class="btn btn-secondary">Read More</a>
                 </div>
             `;
