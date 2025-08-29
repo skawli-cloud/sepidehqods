@@ -83,7 +83,7 @@
 <script>
 const containerEn = document.getElementById('blog-container-en');
 
-fetch('main.json')
+fetch('/main.json')
     .then(res => res.json())
     .then(posts => {
         posts.forEach(post => {
