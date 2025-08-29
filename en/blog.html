@@ -3,98 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latest News - Sepideh Qods</title>
-    <link rel="stylesheet" href="/en/style.css"> <!-- Correct path to CSS -->
+    <title>Sepideh Qods Blog</title>
+    <link rel="stylesheet" href="/en/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <a href="/en/index.html" class="logo-container">
-                <img src="../logo.png" alt="Sepideh Qods Logo" class="logo-img"> <!-- Correct path to logo -->
-                <span class="logo-text">Sepideh Qods</span>
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/en/index.html">Home</a></li>
-                    <li><a href="/en/about.html">About Us</a></li>
-                    <li><a href="/en/blog.html">Blog</a></li>
-                    <li><a href="/en/index.html#strongholds">Strongholds</a></li>
-                    <li><a href="/en/index.html#contact">Contact Us</a></li>
-                </ul>
-            </nav>
-            <!-- Language Switcher -->
-            <div class="language-switcher">
-                <a href="/blog.html" class="lang-link">FA</a>
-                <a href="/en/blog.html" class="lang-link active">EN</a>
-                <a href="/ar/blog.html" class="lang-link">AR</a>
-            </div>
-            <button class="hamburger-menu" aria-label="Toggle menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+<header class="main-header">
+    <div class="container">
+        <a href="/en/index.html" class="logo-container">
+            <img src="../logo.png" alt="Sepideh Qods Logo" class="logo-img">
+            <span class="logo-text">Sepideh Qods</span>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/en/index.html">Home</a></li>
+                <li><a href="/en/about.html">About Us</a></li>
+                <li><a href="/en/blog.html">Blog</a></li>
+                <li><a href="/en/index.html#strongholds">Strongholds</a></li>
+                <li><a href="/en/index.html#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <a href="/blog.html" class="lang-link">FA</a>
+            <a href="/en/blog.html" class="lang-link active">EN</a>
+            <a href="/ar/blog.html" class="lang-link">AR</a>
         </div>
-    </header>
+        <button class="hamburger-menu" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+</header>
 
-    <main>
-        <!-- Blog Page Main Section -->
-        <section class="content-section">
-            <div class="container">
-                <!-- Page Title -->
-                <div class="page-header">
-                    <h1>Sepideh Qods Blog</h1>
-                    <p>The Voice of the People</p>
-                </div>
-
-                <!-- All News List -->
-                <div class="grid-container">
-                    <!-- News 1 -->
-                    <article class="card">
-                        <img src="../1.png" alt="News Image" class="card-img"> <!-- Correct path to image -->
-                        <div class="card-content">
-                            <p class="news-date">2025/00/00</p>
-                            <h3>In today's world, the main battle is in the media. How can we win this war?</h3>
-                            <p>In today's world, the main battlefield is not just on the borders, but in the media. We believe that the voice of the oppressed should not be silenced amidst the propaganda of the powerful. Our mission is to use the media at our disposal to bring the true narrative of Gaza and the innocent people of Palestine to the world.</p>
-                            <p>Victory in this media war is only possible with the weapons of truth and human conscience. We want to break the wall of silence by producing honest content, publishing real images and stories, and reflecting the suffering and resistance.</p>
-                            <p>This platform is not just an information tool for us; it is a stronghold against the distortion of reality and the disregard for human rights. We stand with the people of Palestine and strive to be their voice, because we believe that in the end, truth and justice will prevail over lies and oppression.</p>
-                        </div>
-                    </article>
-                    <!-- News 2 -->
-                    <article class="card">
-                        <img src="../topic1.png" alt="News Image" class="card-img"> <!-- Correct path to image -->
-                        <div class="card-content">
-                            <p class="news-date">2025/00/00</p>
-                            <h3>Sepideh Qods</h3>
-                            <p>The Voice of the Voiceless</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="main-footer">
+<main>
+    <section class="content-section">
         <div class="container">
-            <p>&copy; 2025 Sepideh Qods. A revolution that achieves victory through awareness.</p>
+            <div class="page-header">
+                <h1>Sepideh Qods Blog</h1>
+                <p>The Voice of the People</p>
+            </div>
+
+            <!-- Posts container -->
+            <div class="grid-container" id="blog-container">
+                <!-- Posts will be added here by JavaScript -->
+            </div>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-        const hamburger = document.querySelector('.hamburger-menu');
-        const navMenu = document.querySelector('.main-nav');
-        const body = document.body;
+<footer class="main-footer">
+    <div class="container">
+        <p>&copy; 2025 Sepideh Qods. A revolution that achieves victory through awareness.</p>
+    </div>
+</footer>
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            body.classList.toggle('lock-scroll');
+<script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.main-nav');
+    const body = document.body;
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        body.classList.toggle('lock-scroll');
+    });
+
+    // Load posts from JSON
+    fetch('../posts.json')
+    .then(res => res.json())
+    .then(posts => {
+        const container = document.getElementById('blog-container');
+        posts.forEach(post => {
+            const article = document.createElement('article');
+            article.className = 'card';
+            article.innerHTML = `
+                <img src="../${post.image}" alt="News Image" class="card-img">
+                <div class="card-content">
+                    <p class="news-date">${post.date}</p>
+                    <h3>${post.title.en}</h3>
+                    <p>${post.content.en}</p>
+                </div>
+            `;
+            container.appendChild(article);
         });
-    </script>
+    })
+    .catch(err => console.error("Error loading posts:", err));
+</script>
 
 </body>
 </html>
