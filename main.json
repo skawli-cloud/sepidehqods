@@ -15,8 +15,8 @@
     "image": "1.png",
     "link": {
       "fa": "blog.html#id4",
-      "en": "/en/blog.html#4",
-      "ar": "/ar/blog.html#4"
+      "en": "/en/blog.html#id4",
+      "ar": "/ar/blog.html#id4"
     }
   },
   {
@@ -35,8 +35,8 @@
     "image": "topic1.png",
     "link": {
       "fa": "blog.html#id4",
-      "en": "/en/blog.html#4",
-      "ar": "/ar/blog.html#4"
+      "en": "/en/blog.html#id4",
+      "ar": "/ar/blog.html#id4"
     }
   },
   {
@@ -55,8 +55,8 @@
     "image": "topic2.png",
     "link": {
       "fa": "blog.html#id4",
-      "en": "/en/blog.html#4",
-      "ar": "/ar/blog.html#4"
+      "en": "/en/blog.html#id4",
+      "ar": "/ar/blog.html#id4"
     }
   }
 ]
