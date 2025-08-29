@@ -82,7 +82,7 @@
 <script>
     const containerEn = document.getElementById('blog-container-en');
 
-    fetch('main.json') // مسیر فایل JSON
+    fetch('/main.json') // مسیر فایل JSON
         .then(response => response.json())
         .then(posts => {
             posts.forEach(post => {
