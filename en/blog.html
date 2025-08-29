@@ -72,25 +72,31 @@
     });
 
     // Load posts from JSON
-    fetch('../posts.json')
-    .then(res => res.json())
-    .then(posts => {
-        const container = document.getElementById('blog-container');
-        posts.forEach(post => {
-            const article = document.createElement('article');
-            article.className = 'card';
-            article.innerHTML = `
-                <img src="../${post.image}" alt="News Image" class="card-img">
-                <div class="card-content">
-                    <p class="news-date">${post.date}</p>
-                    <h3>${post.title.en}</h3>
-                    <p>${post.content.en}</p>
-                </div>
-            `;
-            container.appendChild(article);
-        });
-    })
-    .catch(err => console.error("Error loading posts:", err));
+    fetch('/main.json')
+  .then(res => res.json())
+  .then(posts => {
+      posts.forEach(post => {
+          const article = document.createElement('article');
+          article.className = 'card';
+          article.id = 'id' + post.id; // ← این باید دقیقاً با هش لینک مطابقت داشته باشه
+          article.innerHTML = `
+              <img src="${post.image}" alt="${post.title.en}" class="card-img">
+              <div class="card-content">
+                  <h3>${post.title.en}</h3>
+                  <p>${post.content.en || ''}</p>
+              </div>
+          `;
+          containerEn.appendChild(article);
+      });
+
+      // Scroll to post if URL has hash
+      const hash = window.location.hash;
+      if(hash) {
+          const target = document.querySelector(hash);
+          if(target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+
 </script>
 
 </body>
