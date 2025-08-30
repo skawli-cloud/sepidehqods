@@ -111,7 +111,7 @@ body.lock-scroll {
 
 /* Hero Section */
 .hero-section {
-    background-image: url('logo.png');
+    background-image: url('logo.webp');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -409,6 +409,7 @@ body.lock-scroll {
     .hashtag-name {
         font-size: 1.3rem; /* کاهش اندازه فونت هشتگ در موبایل */
     }
+
 
 
 
