@@ -72,7 +72,7 @@
         });
 
         // بارگذاری پست‌ها از فایل JSON
-        fetch('posts.json')
+        fetch('/posts.json')
         .then(res => res.json())
         .then(posts => {
             const container = document.getElementById('blog-container');
