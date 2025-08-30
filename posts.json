@@ -14,9 +14,9 @@
     },
         "image": "1.png",
     "link": {
-      "fa": "blog.html#id4",
-      "en": "/en/blog.html#id4",
-      "ar": "/ar/blog.html#id4"
+      "fa": "blog.html",
+      "en": "/en/blog.html",
+      "ar": "/ar/blog.html"
     }
   },
   {
@@ -34,49 +34,9 @@
     },
     "image": "topic1.png",
     "link": {
-      "fa": "blog.html#id4",
-      "en": "/en/blog.html#id4",
-      "ar": "/ar/blog.html#id4"
-    }
-  },
-  {
-    "id": 3,
-    "date": "1404/0/0",
-    "title": {
-      "fa": "سپیده قدس",
-      "en": "Sepideh Qods",
-      "ar": "سبیده قدس"
-    },
-    "content": {
-      "fa": "00صدای بی صدایان",
-      "en": "Voice of the voiceless00",
-      "ar": "00صوت الذين بلا صوت"
-    },
-        "image": "1.png",
-    "link": {
-      "fa": "blog.html#id4",
-      "en": "/en/blog.html#id4",
-      "ar": "/ar/blog.html#id4"
-    }
-  },
-   {
-    "id": 4,
-    "date": "1404/0/0",
-    "title": {
-      "fa": "سپیده قدس",
-      "en": "Sepideh Qods",
-      "ar": "سبیده قدس"
-    },
-    "content": {
-      "fa": "00صدای بی صدایان",
-      "en": "Voice of the voiceless00",
-      "ar": "00صوت الذين بلا صوت"
-    },
-        "image": "1.png",
-    "link": {
-      "fa": "blog.html#id4",
-      "en": "/en/blog.html#id4",
-      "ar": "/ar/blog.html#id4"
+      "fa": "blog.html",
+      "en": "/en/blog.html",
+      "ar": "/ar/blog.html"
     }
   }
 ]
