@@ -82,7 +82,7 @@
 <script>
     const container = document.getElementById('blog-container');
 
-    fetch('main.json') // مسیر فایل JSON
+    fetch('posts.json') // مسیر فایل JSON
         .then(response => response.json())
         .then(posts => {
             posts.forEach(post => {
@@ -223,6 +223,7 @@
 </body>
 
 </html>
+
 
 
 
