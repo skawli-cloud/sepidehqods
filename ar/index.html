@@ -80,7 +80,7 @@
 <script>
     const containerAr = document.getElementById('blog-container-ar');
 
-    fetch('/main.json') // مسار ملف JSON
+    fetch('/posts.json') // مسار ملف JSON
         .then(response => response.json())
         .then(posts => {
             posts.forEach(post => {
