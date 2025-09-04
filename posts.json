@@ -58,20 +58,5 @@
       "en": "/en/blog.html",
       "ar": "/ar/blog.html"
     }
-  },
-  {
-    "id": 1757003676684,
-    "title": {
-      "fa": "تست",
-      "en": "",
-      "ar": ""
-    },
-    "date": "2025-09-04",
-    "image": "/logo.webp",
-    "content": {
-      "fa": "تست",
-      "en": "",
-      "ar": ""
-    }
   }
 ]
