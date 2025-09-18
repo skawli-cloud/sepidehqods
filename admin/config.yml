@@ -1,11 +1,13 @@
 backend:
   name: git-gateway
-  branch: main   # شاخه اصلی گیت
+  branch: main   # شاخه اصلی گیت‌هاب (main یا master)
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
+
+  # ---------------- فارسی ----------------
   - name: "posts_fa"
     label: "پست‌های فارسی"
     files:
@@ -13,34 +15,165 @@ collections:
         label: "تمام پست‌های فارسی"
         name: "all_posts"
         fields:
-          - { name: "id", label: "ID", widget: "number" }
-          - { name: "date", label: "تاریخ", widget: "string" }
-          - { name: "title", label: "عنوان", widget: "object", fields: 
-              - { name: "fa", label: "عنوان فارسی", widget: "string" }
-              - { name: "en", label: "عنوان انگلیسی", widget: "string" }
-              - { name: "ar", label: "عنوان عربی", widget: "string" } }
-          - { name: "content", label: "محتوا", widget: "object", fields:
-              - { name: "fa", label: "محتوای فارسی", widget: "markdown" }
-              - { name: "en", label: "محتوای انگلیسی", widget: "markdown" }
-              - { name: "ar", label: "محتوای عربی", widget: "markdown" } }
-          - { name: "image", label: "عکس", widget: "image" }
-          - { name: "link", label: "لینک‌ها", widget: "object", fields:
-              - { name: "fa", label: "لینک فارسی", widget: "string" }
-              - { name: "en", label: "لینک انگلیسی", widget: "string" }
-              - { name: "ar", label: "لینک عربی", widget: "string" } }
+          - name: "id"
+            label: "ID"
+            widget: "number"
+          - name: "date"
+            label: "تاریخ"
+            widget: "string"
+          - name: "title"
+            label: "عنوان"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "عنوان فارسی"
+                widget: "string"
+              - name: "en"
+                label: "عنوان انگلیسی"
+                widget: "string"
+              - name: "ar"
+                label: "عنوان عربی"
+                widget: "string"
+          - name: "content"
+            label: "محتوا"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "محتوای فارسی"
+                widget: "markdown"
+              - name: "en"
+                label: "محتوای انگلیسی"
+                widget: "markdown"
+              - name: "ar"
+                label: "محتوای عربی"
+                widget: "markdown"
+          - name: "image"
+            label: "عکس"
+            widget: "image"
+          - name: "link"
+            label: "لینک‌ها"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "لینک فارسی"
+                widget: "string"
+              - name: "en"
+                label: "لینک انگلیسی"
+                widget: "string"
+              - name: "ar"
+                label: "لینک عربی"
+                widget: "string"
 
+  # ---------------- انگلیسی ----------------
   - name: "posts_en"
     label: "English Posts"
     files:
       - file: "data/en/posts.json"
         label: "All English Posts"
         name: "all_posts"
-        fields: *همان فیلدهای بالا*
+        fields:
+          - name: "id"
+            label: "ID"
+            widget: "number"
+          - name: "date"
+            label: "Date"
+            widget: "string"
+          - name: "title"
+            label: "Title"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "Persian Title"
+                widget: "string"
+              - name: "en"
+                label: "English Title"
+                widget: "string"
+              - name: "ar"
+                label: "Arabic Title"
+                widget: "string"
+          - name: "content"
+            label: "Content"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "Persian Content"
+                widget: "markdown"
+              - name: "en"
+                label: "English Content"
+                widget: "markdown"
+              - name: "ar"
+                label: "Arabic Content"
+                widget: "markdown"
+          - name: "image"
+            label: "Image"
+            widget: "image"
+          - name: "link"
+            label: "Links"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "Persian Link"
+                widget: "string"
+              - name: "en"
+                label: "English Link"
+                widget: "string"
+              - name: "ar"
+                label: "Arabic Link"
+                widget: "string"
 
+  # ---------------- عربی ----------------
   - name: "posts_ar"
     label: "المقالات العربية"
     files:
       - file: "data/ar/posts.json"
         label: "جميع المقالات العربية"
         name: "all_posts"
-        fields: *همان فیلدهای بالا*
+        fields:
+          - name: "id"
+            label: "ID"
+            widget: "number"
+          - name: "date"
+            label: "التاريخ"
+            widget: "string"
+          - name: "title"
+            label: "العنوان"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "العنوان بالفارسية"
+                widget: "string"
+              - name: "en"
+                label: "العنوان بالإنجليزية"
+                widget: "string"
+              - name: "ar"
+                label: "العنوان بالعربية"
+                widget: "string"
+          - name: "content"
+            label: "المحتوى"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "المحتوى بالفارسية"
+                widget: "markdown"
+              - name: "en"
+                label: "المحتوى بالإنجليزية"
+                widget: "markdown"
+              - name: "ar"
+                label: "المحتوى بالعربية"
+                widget: "markdown"
+          - name: "image"
+            label: "الصورة"
+            widget: "image"
+          - name: "link"
+            label: "الروابط"
+            widget: "object"
+            fields:
+              - name: "fa"
+                label: "الرابط بالفارسية"
+                widget: "string"
+              - name: "en"
+                label: "الرابط بالإنجليزية"
+                widget: "string"
+              - name: "ar"
+                label: "الرابط بالعربية"
+                widget: "string"
