@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main   # اسم شاخه‌ی اصلی پروژه‌ت تو گیتهاب (مثلاً main یا master)
+
+media_folder: "static/uploads"   # جایی که عکس‌های آپلود شده ذخیره میشن
+public_folder: "/uploads"
+
+collections:
+  - name: "posts_fa"
+    label: "پست‌های فارسی"
+    folder: "data/fa/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { name: "date", label: "تاریخ", widget: "string" }
+      - { name: "title", label: "عنوان", widget: "string" }
+      - { name: "content", label: "محتوا", widget: "markdown" }
+      - { name: "image", label: "عکس", widget: "image" }
+      - { name: "link", label: "لینک", widget: "string" }
+
+  - name: "posts_en"
+    label: "English Posts"
+    folder: "data/en/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { name: "date", label: "Date", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "content", label: "Content", widget: "markdown" }
+      - { name: "image", label: "Image", widget: "image" }
+      - { name: "link", label: "Link", widget: "string" }
+
+  - name: "posts_ar"
+    label: "المقالات العربية"
+    folder: "data/ar/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { name: "date", label: "التاريخ", widget: "string" }
+      - { name: "title", label: "العنوان", widget: "string" }
+      - { name: "content", label: "المحتوى", widget: "markdown" }
+      - { name: "image", label: "الصورة", widget: "image" }
+      - { name: "link", label: "الرابط", widget: "string" }
