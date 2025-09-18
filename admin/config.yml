@@ -1,49 +1,46 @@
 backend:
   name: git-gateway
-  branch: main        # اسم شاخه‌ی اصلی در گیتهاب (ممکنه master باشه)
+  branch: main   # شاخه اصلی گیت
 
-media_folder: "static/uploads"    # محل ذخیره‌ی عکس‌ها در مخزن
-public_folder: "/uploads"         # آدرس عمومی عکس‌ها
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "posts_fa"
     label: "پست‌های فارسی"
-    folder: "data/fa/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "json"
-    format: "json"
-    fields:
-      - { name: "date", label: "تاریخ", widget: "string" }
-      - { name: "title", label: "عنوان", widget: "string" }
-      - { name: "content", label: "محتوا", widget: "markdown" }
-      - { name: "image", label: "عکس", widget: "image" }
-      - { name: "link", label: "لینک", widget: "string" }
+    files:
+      - file: "data/fa/posts.json"
+        label: "تمام پست‌های فارسی"
+        name: "all_posts"
+        fields:
+          - { name: "id", label: "ID", widget: "number" }
+          - { name: "date", label: "تاریخ", widget: "string" }
+          - { name: "title", label: "عنوان", widget: "object", fields: 
+              - { name: "fa", label: "عنوان فارسی", widget: "string" }
+              - { name: "en", label: "عنوان انگلیسی", widget: "string" }
+              - { name: "ar", label: "عنوان عربی", widget: "string" } }
+          - { name: "content", label: "محتوا", widget: "object", fields:
+              - { name: "fa", label: "محتوای فارسی", widget: "markdown" }
+              - { name: "en", label: "محتوای انگلیسی", widget: "markdown" }
+              - { name: "ar", label: "محتوای عربی", widget: "markdown" } }
+          - { name: "image", label: "عکس", widget: "image" }
+          - { name: "link", label: "لینک‌ها", widget: "object", fields:
+              - { name: "fa", label: "لینک فارسی", widget: "string" }
+              - { name: "en", label: "لینک انگلیسی", widget: "string" }
+              - { name: "ar", label: "لینک عربی", widget: "string" } }
 
   - name: "posts_en"
     label: "English Posts"
-    folder: "data/en/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "json"
-    format: "json"
-    fields:
-      - { name: "date", label: "Date", widget: "string" }
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "content", label: "Content", widget: "markdown" }
-      - { name: "image", label: "Image", widget: "image" }
-      - { name: "link", label: "Link", widget: "string" }
+    files:
+      - file: "data/en/posts.json"
+        label: "All English Posts"
+        name: "all_posts"
+        fields: *همان فیلدهای بالا*
 
   - name: "posts_ar"
     label: "المقالات العربية"
-    folder: "data/ar/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "json"
-    format: "json"
-    fields:
-      - { name: "date", label: "التاريخ", widget: "string" }
-      - { name: "title", label: "العنوان", widget: "string" }
-      - { name: "content", label: "المحتوى", widget: "markdown" }
-      - { name: "image", label: "الصورة", widget: "image" }
-      - { name: "link", label: "الرابط", widget: "string" }
+    files:
+      - file: "data/ar/posts.json"
+        label: "جميع المقالات العربية"
+        name: "all_posts"
+        fields: *همان فیلدهای بالا*
