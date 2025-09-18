@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: main   # اسم شاخه‌ی اصلی پروژه‌ت تو گیتهاب (مثلاً main یا master)
+  branch: main        # اسم شاخه‌ی اصلی در گیتهاب (ممکنه master باشه)
 
-media_folder: "static/uploads"   # جایی که عکس‌های آپلود شده ذخیره میشن
-public_folder: "/uploads"
+media_folder: "static/uploads"    # محل ذخیره‌ی عکس‌ها در مخزن
+public_folder: "/uploads"         # آدرس عمومی عکس‌ها
 
 collections:
   - name: "posts_fa"
