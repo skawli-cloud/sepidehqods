@@ -2,12 +2,17 @@ backend:
   name: git-gateway
   branch: main   # شاخه اصلی گیت‌هاب شما
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "static/uploads"   # مسیر ذخیره عکس‌ها در پروژه
+public_folder: "/uploads"        # مسیر دسترسی عمومی عکس‌ها
+
+publish_mode: editorial_workflow  # فعال کردن سیستم بازبینی / انتشار
 
 collections:
   - name: "posts"
     label: "همه پست‌ها"
+    delete: true          # امکان حذف پست‌ها
+    editor:
+      preview: false      # خاموش کردن پیش‌نمایش HTML برای Markdown
     files:
       - file: "posts.json"
         label: "Posts"
@@ -18,7 +23,8 @@ collections:
             widget: "number"
           - name: "date"
             label: "تاریخ"
-            widget: "string"
+            widget: "datetime"
+            format: "YYYY/MM/DD"
           - name: "title"
             label: "عنوان"
             widget: "object"
@@ -48,6 +54,7 @@ collections:
           - name: "image"
             label: "عکس"
             widget: "image"
+            required: false
           - name: "link"
             label: "لینک‌ها"
             widget: "object"
